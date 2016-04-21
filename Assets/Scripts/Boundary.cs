@@ -41,8 +41,6 @@ public class Boundary : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("something entered boundary");
-
         var position = other.transform.position;
         var mod = thisPosition == LeftOrRight.Left ? -10 : 10;
         position.x = opposideBoundary.transform.position.x + mod;
